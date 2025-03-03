@@ -1,0 +1,21 @@
+{
+  "name": "helloworld-sample",
+  "sources": {
+    "dir": "src",
+    "subdirs": true
+  },
+  "package-specs": {
+    "module": "commonjs",
+    "in-source": true
+  },
+  "suffix": ".mjs",
+  "bs-dependencies": [
+    "@rescript/core"
+  ],
+  "js-post-build": {
+    "cmd": "./rename_file.sh"
+  },
+  "bsc-flags": [
+    "-open RescriptCore"
+  ]
+}
